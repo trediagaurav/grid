@@ -4,7 +4,6 @@ import movies from './data_a';
 import pokemon from './data_b';
 
 const Trailer = ({ data }) => (
-  // console.log(data)
   <a href={data.map(link => link.url)}
      target="_blank"
      rel="noopener noreferrer">
@@ -18,9 +17,16 @@ const  rate = movies.map(data => data.imdbRating)
 const Id =  movies.map(data => data.imdbID)
 const trailer = movies.map(data => {
   // console.log(data.Trailer)
-  return data.Trailer
+  return <a href={data.Trailer.url}
+  target="_blank"
+  rel="noopener noreferrer">
+ trailer...
+</a>
 })
-
+// const name = pokemon.map(data => {
+//   // console.log(data.Trailer)
+//   return 
+// })
 const number = pokemon.map(data=> data.number)
 
 const moviesConfig = [
@@ -37,11 +43,11 @@ const moviesConfig = [
     title: 'rating',
     field: rate,
   },
-//  {
-//    title: 'trailer',
-//    field: "trailer",
-//    component: Trailer({data: trailer})
-//  }
+ {
+   title: 'trailer',
+   field: trailer,
+  //  component: Trailer({data: trailer})
+ }
 ];
 
 const pokemonConfig = [
