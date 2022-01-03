@@ -36,11 +36,11 @@ const moviesConfig = [
 
   {
     title: 'id',
-    field: Id
+    field: Id,
   },
   {
     title: 'title',
-    field: title
+    field: title,
   },
   {
     title: 'rating',
@@ -56,7 +56,7 @@ const moviesConfig = [
 const pokemonConfig = [
   {
     title: 'pokedex #',
-    field: number
+    field: number,
   },
   {
     title: 'name',
