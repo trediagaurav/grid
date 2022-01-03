@@ -62,7 +62,7 @@ const App = () => (
     <Grid config={moviesConfig} data={movies} />
 
     <h2>Pokemon</h2>
-    {/* <Grid config={pokemonConfig} data={pokemon} /> */}
+    <Grid config={pokemonConfig} data={pokemon} />
   </div>
 );
 
