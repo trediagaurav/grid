@@ -60,7 +60,7 @@ const pokemonConfig = [
   {
     title: 'name',
     field: name,
-    // component: PokemonName
+    // component: PokemonName({data: name})
   },
 ];
 
