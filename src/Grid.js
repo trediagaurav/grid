@@ -4,17 +4,17 @@ const Grid = ({ config, data }) => (
    <table>
     <thead>
       <tr>
-        {config.map(data => {
-          return <th>{data.title}</th>
+        {config.map((data, i) => {
+          return <th key={i}>{data.title}</th>
         })}
       </tr>
     </thead>
     <tbody>
       <tr>
-        {config.map(data => {
+        {config.map((data, i) => {
           return (
-            <td>{data.field.map(field => {
-              return <tr>{field}</tr>
+            <td key={i}>{data.field.map((field, i) => {
+              return <tr key={i}>{field}</tr>
             })}</td>
           )
         })}
