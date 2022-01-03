@@ -12,11 +12,11 @@ const Trailer = ({ data }) => (
 );
 const PokemonName = ({ data }) => <span style={{ textTransform: 'capitalize' }}>{data}</span>;
 
-const title = movies.map(data => data.Title)
+const title = movies.map(data => data.Title);
 
-const rate = movies.map(data => data.imdbRating)
+const rate = movies.map(data => data.imdbRating);
 
-const Id = movies.map(data => data.imdbID)
+const Id = movies.map(data => data.imdbID);
 
 const trailer = movies.map(data => {
   return <a href={data.Trailer.url}
@@ -24,12 +24,13 @@ const trailer = movies.map(data => {
     rel="noopener noreferrer">
     trailer...
   </a>
-})
+});
 
 const name = pokemon.map(data => {
   return <span style={{ textTransform: 'capitalize' }}>{data.name}</span>;
-})
-const number = pokemon.map(data => data.number)
+});
+
+const number = pokemon.map(data => data.number);
 
 const moviesConfig = [
 
