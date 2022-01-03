@@ -5,32 +5,34 @@ import pokemon from './data_b';
 
 const Trailer = ({ data }) => (
   <a href={data.map(link => link.url)}
-     target="_blank"
-     rel="noopener noreferrer">
+    target="_blank"
+    rel="noopener noreferrer">
     trailer...
   </a>
 );
 const PokemonName = ({ data }) => <span style={{ textTransform: 'capitalize' }}>{data}</span>;
 
 const title = movies.map(data => data.Title)
-const  rate = movies.map(data => data.imdbRating)
-const Id =  movies.map(data => data.imdbID)
+
+const rate = movies.map(data => data.imdbRating)
+
+const Id = movies.map(data => data.imdbID)
+
 const trailer = movies.map(data => {
-  // console.log(data.Trailer)
   return <a href={data.Trailer.url}
-  target="_blank"
-  rel="noopener noreferrer">
- trailer...
-</a>
+    target="_blank"
+    rel="noopener noreferrer">
+    trailer...
+  </a>
 })
-// const name = pokemon.map(data => {
-//   // console.log(data.Trailer)
-//   return 
-// })
-const number = pokemon.map(data=> data.number)
+
+const name = pokemon.map(data => {
+  return <span style={{ textTransform: 'capitalize' }}>{data.name}</span>;
+})
+const number = pokemon.map(data => data.number)
 
 const moviesConfig = [
-  
+
   {
     title: 'id',
     field: Id
@@ -43,11 +45,11 @@ const moviesConfig = [
     title: 'rating',
     field: rate,
   },
- {
-   title: 'trailer',
-   field: trailer,
-  //  component: Trailer({data: trailer})
- }
+  {
+    title: 'trailer',
+    field: trailer,
+    //  component: Trailer({data: trailer})
+  }
 ];
 
 const pokemonConfig = [
@@ -55,11 +57,11 @@ const pokemonConfig = [
     title: 'pokedex #',
     field: number
   },
-  // {
-  //   title: 'name',
-  //   field: 'name',
-  //   component: PokemonName
-  // },
+  {
+    title: 'name',
+    field: name,
+    // component: PokemonName
+  },
 ];
 
 const App = () => (
